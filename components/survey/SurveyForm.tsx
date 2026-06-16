@@ -28,16 +28,16 @@ function ProgressBar({ step }: { step: number }) {
   return (
     <div className="mb-10">
       <div className="flex items-center justify-between mb-2">
-        <span className="text-xs uppercase tracking-widest font-medium" style={{ color: "#C9A84C" }}>
+        <span className="text-xs uppercase tracking-widest font-bold" style={{ color: "#C9A84C" }}>
           Step {step} of {TOTAL_STEPS}
         </span>
-        <span className="text-xs" style={{ color: "#555" }}>
+        <span className="text-xs font-medium" style={{ color: "#aaa" }}>
           {Math.round((step / TOTAL_STEPS) * 100)}% complete
         </span>
       </div>
-      <div className="h-px w-full" style={{ background: "rgba(201,168,76,0.15)" }}>
+      <div className="h-1 w-full rounded-full" style={{ background: "#f0f0f0" }}>
         <div
-          className="h-full transition-all duration-500 ease-out"
+          className="h-full rounded-full transition-all duration-500 ease-out"
           style={{
             width: `${(step / TOTAL_STEPS) * 100}%`,
             background: "linear-gradient(to right, #C9A84C, #E0C070)",
@@ -51,8 +51,8 @@ function ProgressBar({ step }: { step: number }) {
 function Label({ children }: { children: React.ReactNode }) {
   return (
     <label
-      className="block text-xs uppercase tracking-widest font-semibold mb-2"
-      style={{ color: "#888" }}
+      className="block text-xs uppercase tracking-widest font-bold mb-2"
+      style={{ color: "#555" }}
     >
       {children}
     </label>
@@ -173,18 +173,18 @@ export default function SurveyForm() {
           &#10003;
         </div>
         <h2
-          className="text-3xl sm:text-4xl font-bold mb-4"
-          style={{ fontFamily: "var(--font-playfair), Georgia, serif", color: "#F5F0E8" }}
+          className="font-black mb-4"
+          style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.8rem, 4vw, 2.5rem)", color: "#111111" }}
         >
           You&apos;re on the list.
         </h2>
-        <p className="text-base mb-6 max-w-md mx-auto" style={{ color: "#888" }}>
+        <p className="text-base mb-6 max-w-md mx-auto" style={{ color: "#666" }}>
           Thank you, {form.name.split(" ")[0]}. Our team has received your details and
           will be in touch within 1 business day to book your free strategy call.
         </p>
-        <p className="text-sm" style={{ color: "#555" }}>
+        <p className="text-sm" style={{ color: "#888" }}>
           Keep an eye on your inbox at{" "}
-          <span style={{ color: "#C9A84C" }}>{form.email}</span>.
+          <span style={{ color: "#C9A84C", fontWeight: 700 }}>{form.email}</span>.
         </p>
       </motion.div>
     );
@@ -209,11 +209,11 @@ export default function SurveyForm() {
               <div>
                 <h2
                   className="text-2xl sm:text-3xl font-bold mb-2"
-                  style={{ fontFamily: "var(--font-playfair), Georgia, serif", color: "#F5F0E8" }}
+                  style={{ fontFamily: "var(--font-playfair), Georgia, serif", color: "#111111" }}
                 >
                   Let&apos;s start with your details
                 </h2>
-                <p className="text-sm mb-8" style={{ color: "#888" }}>
+                <p className="text-sm mb-8" style={{ color: "#777" }}>
                   We&apos;ll use these to reach out and book your free strategy call.
                 </p>
                 <div className="flex flex-col gap-5">
@@ -255,12 +255,12 @@ export default function SurveyForm() {
             {step === 2 && (
               <div>
                 <h2
-                  className="text-2xl sm:text-3xl font-bold mb-2"
-                  style={{ fontFamily: "var(--font-playfair), Georgia, serif", color: "#F5F0E8" }}
+                  className="font-black mb-2"
+                  style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.5rem, 3.5vw, 2rem)", color: "#111111" }}
                 >
                   Tell us about your business
                 </h2>
-                <p className="text-sm mb-8" style={{ color: "#888" }}>
+                <p className="text-sm mb-8" style={{ color: "#777" }}>
                   This helps us research your local market before the call.
                 </p>
                 <div className="flex flex-col gap-5">
@@ -292,12 +292,12 @@ export default function SurveyForm() {
             {step === 3 && (
               <div>
                 <h2
-                  className="text-2xl sm:text-3xl font-bold mb-2"
-                  style={{ fontFamily: "var(--font-playfair), Georgia, serif", color: "#F5F0E8" }}
+                  className="font-black mb-2"
+                  style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.5rem, 3.5vw, 2rem)", color: "#111111" }}
                 >
                   Do you have any social media?
                 </h2>
-                <p className="text-sm mb-8" style={{ color: "#888" }}>
+                <p className="text-sm mb-8" style={{ color: "#777" }}>
                   All optional. We&apos;ll use these to understand your existing brand presence.
                 </p>
                 <div className="flex flex-col gap-5">
@@ -339,12 +339,12 @@ export default function SurveyForm() {
             {step === 4 && (
               <div>
                 <h2
-                  className="text-2xl sm:text-3xl font-bold mb-2"
-                  style={{ fontFamily: "var(--font-playfair), Georgia, serif", color: "#F5F0E8" }}
+                  className="font-black mb-2"
+                  style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.5rem, 3.5vw, 2rem)", color: "#111111" }}
                 >
                   What are you looking for in a website?
                 </h2>
-                <p className="text-sm mb-8" style={{ color: "#888" }}>
+                <p className="text-sm mb-8" style={{ color: "#777" }}>
                   The more detail you give us, the better prepared we&apos;ll be for your call. Share
                   your goals, what you like or dislike about other sites, any features you want,
                   anything at all.
@@ -373,11 +373,11 @@ export default function SurveyForm() {
         </p>
       )}
 
-      <div className="flex items-center justify-between mt-8 pt-6" style={{ borderTop: "1px solid rgba(201,168,76,0.12)" }}>
+      <div className="flex items-center justify-between mt-8 pt-6" style={{ borderTop: "1px solid #ebebeb" }}>
         <button
           onClick={back}
           disabled={step === 1}
-          className="btn-outline text-xs"
+          className="btn-outline-light text-xs"
           style={{ opacity: step === 1 ? 0 : 1, pointerEvents: step === 1 ? "none" : "auto" }}
         >
           Back

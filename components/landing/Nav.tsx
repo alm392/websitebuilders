@@ -7,7 +7,7 @@ export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
+    const onScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -16,29 +16,24 @@ export default function Nav() {
     <nav
       className="sticky top-0 z-40 transition-all duration-300"
       style={{
-        background: scrolled ? "rgba(10,10,10,0.97)" : "rgba(10,10,10,0.85)",
-        backdropFilter: "blur(12px)",
-        borderBottom: scrolled ? "1px solid rgba(201,168,76,0.15)" : "1px solid transparent",
+        background: scrolled ? "rgba(10,4,4,0.98)" : "#0a0404",
+        backdropFilter: scrolled ? "blur(10px)" : "none",
+        borderBottom: scrolled ? "1px solid rgba(201,168,76,0.2)" : "1px solid rgba(255,255,255,0.08)",
       }}
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16">
-        <Link href="/" className="flex items-center gap-2">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-[70px]">
+        <Link href="/" className="flex items-center">
           <span
-            className="text-xl font-bold tracking-tight"
-            style={{ fontFamily: "var(--font-playfair), Georgia, serif", color: "#F5F0E8" }}
+            className="text-xl font-black tracking-tight"
+            style={{ fontFamily: "var(--font-playfair), Georgia, serif", color: "#ffffff" }}
           >
             The Website <span style={{ color: "#C9A84C" }}>Builders</span>
           </span>
         </Link>
 
-        <div className="flex items-center gap-6">
-          <Link
-            href="/survey"
-            className="btn-primary text-xs"
-          >
-            Get Your Free Strategy Call
-          </Link>
-        </div>
+        <Link href="/survey" className="btn-primary">
+          Get Your Free Strategy Call
+        </Link>
       </div>
     </nav>
   );

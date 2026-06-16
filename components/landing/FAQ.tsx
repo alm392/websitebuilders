@@ -42,21 +42,23 @@ export default function FAQ() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section className="py-28 px-6 lg:px-8" style={{ background: "#0d0d0d" }}>
+    <section className="py-24 px-6 lg:px-10 section-light-alt">
       <div className="max-w-3xl mx-auto">
         <motion.div
-          className="text-center mb-16"
+          className="mb-14"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-xs uppercase tracking-[0.3em] mb-4 font-medium" style={{ color: "#C9A84C" }}>
-            Common Questions
-          </p>
+          <span className="section-label">Common Questions</span>
           <h2
-            className="text-4xl sm:text-5xl font-bold"
-            style={{ fontFamily: "var(--font-playfair), Georgia, serif", color: "#F5F0E8" }}
+            className="font-black leading-tight"
+            style={{
+              fontFamily: "var(--font-playfair), Georgia, serif",
+              fontSize: "clamp(2rem, 4.5vw, 3.5rem)",
+              color: "#111111",
+            }}
           >
             Everything You Want to Know
           </h2>
@@ -67,11 +69,11 @@ export default function FAQ() {
             <motion.div
               key={i}
               className="border-b"
-              style={{ borderColor: "rgba(201,168,76,0.12)" }}
-              initial={{ opacity: 0, y: 16 }}
+              style={{ borderColor: "#e0e0e0" }}
+              initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.05 }}
+              transition={{ duration: 0.35, delay: i * 0.04 }}
             >
               <button
                 onClick={() => setOpen(open === i ? null : i)}
@@ -79,8 +81,12 @@ export default function FAQ() {
                 aria-expanded={open === i}
               >
                 <span
-                  className="text-base font-semibold leading-snug"
-                  style={{ color: open === i ? "#C9A84C" : "#F5F0E8", transition: "color 0.2s" }}
+                  className="text-base font-black leading-snug"
+                  style={{
+                    fontFamily: "var(--font-playfair), Georgia, serif",
+                    color: open === i ? "#C9A84C" : "#111111",
+                    transition: "color 0.2s",
+                  }}
                 >
                   {faq.q}
                 </span>
@@ -98,10 +104,10 @@ export default function FAQ() {
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: "auto", opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.3 }}
+                    transition={{ duration: 0.28 }}
                     style={{ overflow: "hidden" }}
                   >
-                    <p className="pb-6 text-sm leading-relaxed" style={{ color: "#888" }}>
+                    <p className="pb-6 text-sm leading-relaxed" style={{ color: "#666" }}>
                       {faq.a}
                     </p>
                   </motion.div>

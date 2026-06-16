@@ -16,19 +16,19 @@ export default function TrustStrip() {
 
   return (
     <div
-      className="overflow-hidden py-5 border-y"
-      style={{ background: "#0d0d0d", borderColor: "rgba(201,168,76,0.15)" }}
+      className="overflow-hidden py-4 section-light-alt"
+      style={{ borderTop: "1px solid #e8e8e8", borderBottom: "1px solid #e8e8e8" }}
     >
-      <div className="scrolling-track flex items-center gap-12 whitespace-nowrap w-max">
+      <div className="scrolling-track flex items-center gap-10 whitespace-nowrap w-max">
         {doubled.map((item, i) => (
-          <span key={i} className="flex items-center gap-3">
+          <span key={i} className="flex items-center gap-4">
             <span
-              className="text-xs uppercase tracking-[0.2em] font-medium"
-              style={{ color: "#888" }}
+              className="text-xs uppercase tracking-[0.2em] font-bold"
+              style={{ color: "#555" }}
             >
               {item}
             </span>
-            <span style={{ color: "rgba(201,168,76,0.4)", fontSize: "6px" }}>&#9670;</span>
+            <span style={{ color: "#C9A84C", fontSize: "8px" }}>&#9670;</span>
           </span>
         ))}
       </div>

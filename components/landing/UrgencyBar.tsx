@@ -43,29 +43,42 @@ export default function UrgencyBar() {
 
   return (
     <div
-      style={{ background: "linear-gradient(135deg, #1a0f00 0%, #2a1800 50%, #1a0f00 100%)", borderBottom: "1px solid rgba(201,168,76,0.3)" }}
+      style={{
+        background: "#C9A84C",
+        borderBottom: "none",
+      }}
       className="relative z-50 py-2.5 px-4"
     >
-      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6 text-center">
-        <p className="text-xs sm:text-sm font-medium tracking-wide" style={{ color: "#F5F0E8" }}>
-          <span style={{ color: "#C9A84C" }} className="font-bold">THIS WEEK ONLY:</span>{" "}
+      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-3 text-center">
+        <p
+          className="text-xs sm:text-sm font-bold tracking-wide"
+          style={{ color: "#0a0404" }}
+        >
+          <span className="font-black">THIS WEEK ONLY:</span>{" "}
           Full website build for{" "}
-          <span style={{ color: "#C9A84C" }} className="font-bold">$500</span>
+          <span className="font-black underline">$500</span>
           {" "}(normally $1,500). Offer expires in:
         </p>
         {mounted && (
-          <div className="flex items-center gap-1 font-mono text-sm font-bold" style={{ color: "#C9A84C" }}>
-            <span className="bg-black bg-opacity-40 px-1.5 py-0.5 rounded">{pad(timeLeft.days)}d</span>
+          <div
+            className="flex items-center gap-1 font-mono text-sm font-black"
+            style={{ color: "#0a0404" }}
+          >
+            <span className="bg-black bg-opacity-15 px-2 py-0.5 rounded-sm">{pad(timeLeft.days)}d</span>
             <span>:</span>
-            <span className="bg-black bg-opacity-40 px-1.5 py-0.5 rounded">{pad(timeLeft.hours)}h</span>
+            <span className="bg-black bg-opacity-15 px-2 py-0.5 rounded-sm">{pad(timeLeft.hours)}h</span>
             <span>:</span>
-            <span className="bg-black bg-opacity-40 px-1.5 py-0.5 rounded">{pad(timeLeft.minutes)}m</span>
+            <span className="bg-black bg-opacity-15 px-2 py-0.5 rounded-sm">{pad(timeLeft.minutes)}m</span>
             <span>:</span>
-            <span className="bg-black bg-opacity-40 px-1.5 py-0.5 rounded">{pad(timeLeft.seconds)}s</span>
+            <span className="bg-black bg-opacity-15 px-2 py-0.5 rounded-sm">{pad(timeLeft.seconds)}s</span>
           </div>
         )}
-        <Link href="/survey" className="hidden sm:block text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-sm" style={{ background: "#C9A84C", color: "#0a0a0a" }}>
-          Claim Offer
+        <Link
+          href="/survey"
+          className="hidden sm:block text-xs font-black uppercase tracking-widest px-4 py-1.5 rounded-sm"
+          style={{ background: "#0a0404", color: "#C9A84C" }}
+        >
+          Claim Now
         </Link>
       </div>
     </div>
