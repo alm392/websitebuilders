@@ -32,7 +32,6 @@ export default function Services() {
           <h2
             className="font-black leading-tight mb-4"
             style={{
-              fontFamily: "var(--font-playfair), Georgia, serif",
               fontSize: "clamp(2rem, 4.5vw, 3.5rem)",
               color: "#111111",
             }}
@@ -62,17 +61,17 @@ export default function Services() {
             >
               <div
                 className="absolute top-0 left-8 w-10 h-[3px]"
-                style={{ background: "linear-gradient(to right, #C9A84C, #E8CB6A)" }}
+                style={{ background: "linear-gradient(to right, #A8D507, #cff128)" }}
               />
               <span
                 className="inline-block text-xs uppercase tracking-widest font-black mb-5 mt-3"
-                style={{ color: "#C9A84C" }}
+                style={{ color: "#A8D507" }}
               >
                 Optional Feature
               </span>
               <h3
                 className="text-xl font-black mb-4"
-                style={{ fontFamily: "var(--font-playfair), Georgia, serif", color: "#111111" }}
+                style={{ color: "#111111" }}
               >
                 {s.title}
               </h3>
@@ -83,7 +82,7 @@ export default function Services() {
           ))}
         </div>
 
-        <p className="mt-8 text-xs font-medium" style={{ color: "#aaa" }}>
+        <p className="mt-8 text-xs font-medium" style={{ color: "#999" }}>
           Pricing for optional features is discussed during your free strategy call.
         </p>
       </div>

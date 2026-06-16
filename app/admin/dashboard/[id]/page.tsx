@@ -43,13 +43,13 @@ export default async function SubmissionDetailPage({
     <div className="min-h-screen" style={{ background: "#0a0a0a" }}>
       <div
         className="py-4 px-6 lg:px-8 flex items-center justify-between"
-        style={{ borderBottom: "1px solid rgba(201,168,76,0.1)", background: "#080808" }}
+        style={{ borderBottom: "1px solid rgba(168,213,7,0.1)", background: "#080808" }}
       >
         <p
           className="text-lg font-bold"
-          style={{ fontFamily: "var(--font-playfair), Georgia, serif", color: "#F5F0E8" }}
+          style={{ color: "#f0f0f0" }}
         >
-          The Website <span style={{ color: "#C9A84C" }}>Builders</span>
+          The Website <span style={{ color: "#A8D507" }}>Builders</span>
         </p>
         <Link href="/admin/dashboard" className="btn-outline text-xs py-2 px-4">
           Back to Dashboard
@@ -58,12 +58,12 @@ export default async function SubmissionDetailPage({
 
       <div className="max-w-3xl mx-auto px-6 lg:px-8 py-12">
         <div className="mb-8">
-          <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "#555" }}>
+          <p className="text-xs uppercase tracking-widest mb-1" style={{ color: "#888" }}>
             Submission #{s.id} &middot; {formatDate(s.created_at)}
           </p>
           <h1
             className="text-3xl font-bold"
-            style={{ fontFamily: "var(--font-playfair), Georgia, serif", color: "#F5F0E8" }}
+            style={{ color: "#f0f0f0" }}
           >
             {s.name}
           </h1>
@@ -95,7 +95,7 @@ export default async function SubmissionDetailPage({
           <Section title="What They Are Looking For">
             <div
               className="p-5 rounded-sm text-sm leading-relaxed whitespace-pre-wrap"
-              style={{ background: "#0d0d0d", color: "#888", border: "1px solid rgba(201,168,76,0.08)" }}
+              style={{ background: "#0d0d0d", color: "#888", border: "1px solid rgba(168,213,7,0.08)" }}
             >
               {s.goals}
             </div>
@@ -110,13 +110,13 @@ function Section({ title, children }: { title: string; children: React.ReactNode
   return (
     <div
       className="rounded-sm overflow-hidden"
-      style={{ border: "1px solid rgba(201,168,76,0.12)" }}
+      style={{ border: "1px solid rgba(168,213,7,0.12)" }}
     >
       <div
         className="px-6 py-3"
-        style={{ background: "#111", borderBottom: "1px solid rgba(201,168,76,0.1)" }}
+        style={{ background: "#111", borderBottom: "1px solid rgba(168,213,7,0.1)" }}
       >
-        <p className="text-xs uppercase tracking-widest font-semibold" style={{ color: "#C9A84C" }}>
+        <p className="text-xs uppercase tracking-widest font-semibold" style={{ color: "#A8D507" }}>
           {title}
         </p>
       </div>
@@ -130,10 +130,10 @@ function Section({ title, children }: { title: string; children: React.ReactNode
 function Row({ label, value }: { label: string; value: string }) {
   return (
     <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4">
-      <span className="text-xs uppercase tracking-widest font-medium w-32 flex-shrink-0" style={{ color: "#555" }}>
+      <span className="text-xs uppercase tracking-widest font-medium w-32 flex-shrink-0" style={{ color: "#888" }}>
         {label}
       </span>
-      <span className="text-sm" style={{ color: "#F5F0E8" }}>
+      <span className="text-sm" style={{ color: "#f0f0f0" }}>
         {value}
       </span>
     </div>

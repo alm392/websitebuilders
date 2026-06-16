@@ -37,14 +37,14 @@ export default function AdminDashboardClient({
     <div className="min-h-screen" style={{ background: "#0a0a0a" }}>
       <div
         className="py-4 px-6 lg:px-8 flex items-center justify-between"
-        style={{ borderBottom: "1px solid rgba(201,168,76,0.1)", background: "#080808" }}
+        style={{ borderBottom: "1px solid rgba(168,213,7,0.1)", background: "#080808" }}
       >
         <p
           className="text-lg font-bold"
-          style={{ fontFamily: "var(--font-playfair), Georgia, serif", color: "#F5F0E8" }}
+          style={{ color: "#f0f0f0" }}
         >
-          The Website <span style={{ color: "#C9A84C" }}>Builders</span>{" "}
-          <span className="text-sm font-normal" style={{ color: "#555" }}>
+          The Website <span style={{ color: "#A8D507" }}>Builders</span>{" "}
+          <span className="text-sm font-normal" style={{ color: "#888" }}>
             / Admin
           </span>
         </p>
@@ -58,11 +58,11 @@ export default function AdminDashboardClient({
           <div>
             <h1
               className="text-3xl font-bold"
-              style={{ fontFamily: "var(--font-playfair), Georgia, serif", color: "#F5F0E8" }}
+              style={{ color: "#f0f0f0" }}
             >
               Submissions
             </h1>
-            <p className="mt-1 text-sm" style={{ color: "#555" }}>
+            <p className="mt-1 text-sm" style={{ color: "#888" }}>
               {submissions.length} total{" "}
               {submissions.length === 1 ? "submission" : "submissions"}
             </p>
@@ -72,26 +72,26 @@ export default function AdminDashboardClient({
         {submissions.length === 0 ? (
           <div
             className="py-20 text-center rounded-sm"
-            style={{ background: "#111", border: "1px solid rgba(201,168,76,0.1)" }}
+            style={{ background: "#111", border: "1px solid rgba(168,213,7,0.1)" }}
           >
             <p className="text-2xl mb-2" style={{ color: "#333" }}>
               No submissions yet
             </p>
-            <p className="text-sm" style={{ color: "#555" }}>
+            <p className="text-sm" style={{ color: "#888" }}>
               Submissions will appear here once someone completes the survey.
             </p>
           </div>
         ) : (
           <div
             className="rounded-sm overflow-hidden"
-            style={{ border: "1px solid rgba(201,168,76,0.12)" }}
+            style={{ border: "1px solid rgba(168,213,7,0.12)" }}
           >
             <div
               className="grid text-xs uppercase tracking-widest font-semibold px-6 py-3"
               style={{
                 background: "#111",
-                color: "#555",
-                borderBottom: "1px solid rgba(201,168,76,0.1)",
+                color: "#888",
+                borderBottom: "1px solid rgba(168,213,7,0.1)",
                 gridTemplateColumns: "120px 1fr 1fr 1fr 1fr 60px",
               }}
             >
@@ -111,7 +111,7 @@ export default function AdminDashboardClient({
                 style={{
                   gridTemplateColumns: "120px 1fr 1fr 1fr 1fr 60px",
                   background: i % 2 === 0 ? "#0a0a0a" : "#0d0d0d",
-                  borderBottom: i < submissions.length - 1 ? "1px solid rgba(201,168,76,0.06)" : "none",
+                  borderBottom: i < submissions.length - 1 ? "1px solid rgba(168,213,7,0.06)" : "none",
                   textDecoration: "none",
                 }}
                 onMouseEnter={(e) => {
@@ -122,10 +122,10 @@ export default function AdminDashboardClient({
                     i % 2 === 0 ? "#0a0a0a" : "#0d0d0d";
                 }}
               >
-                <span className="text-xs" style={{ color: "#555" }}>
+                <span className="text-xs" style={{ color: "#888" }}>
                   {formatDate(s.created_at)}
                 </span>
-                <span className="text-sm font-medium" style={{ color: "#F5F0E8" }}>
+                <span className="text-sm font-medium" style={{ color: "#f0f0f0" }}>
                   {s.name}
                 </span>
                 <span className="text-sm" style={{ color: "#888" }}>
@@ -137,7 +137,7 @@ export default function AdminDashboardClient({
                 <span className="text-xs" style={{ color: "#666" }}>
                   {s.location}
                 </span>
-                <span className="text-xs text-right" style={{ color: "#C9A84C" }}>
+                <span className="text-xs text-right" style={{ color: "#A8D507" }}>
                   View &rarr;
                 </span>
               </Link>

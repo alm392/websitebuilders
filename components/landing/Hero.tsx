@@ -23,7 +23,6 @@ export default function Hero() {
         <motion.h1
           className="font-black leading-[1.05] mb-8"
           style={{
-            fontFamily: "var(--font-playfair), Georgia, serif",
             fontSize: "clamp(2.8rem, 7vw, 5.5rem)",
             color: "#ffffff",
           }}
@@ -55,14 +54,14 @@ export default function Hero() {
         >
           <span
             className="text-sm font-bold px-4 py-2 rounded-sm"
-            style={{ background: "rgba(201,168,76,0.12)", border: "1.5px solid rgba(201,168,76,0.35)", color: "#C9A84C" }}
+            style={{ background: "rgba(168,213,7,0.12)", border: "1.5px solid rgba(168,213,7,0.35)", color: "#A8D507" }}
           >
             $500 one-time build
           </span>
-          <span style={{ color: "#555" }} className="text-sm font-bold">+</span>
+          <span style={{ color: "#888" }} className="text-sm font-bold">+</span>
           <span
             className="text-sm font-bold px-4 py-2 rounded-sm"
-            style={{ background: "rgba(201,168,76,0.12)", border: "1.5px solid rgba(201,168,76,0.35)", color: "#C9A84C" }}
+            style={{ background: "rgba(168,213,7,0.12)", border: "1.5px solid rgba(168,213,7,0.35)", color: "#A8D507" }}
           >
             $50/month maintenance
           </span>
@@ -81,7 +80,7 @@ export default function Hero() {
 
         <motion.p
           className="mt-5 text-xs"
-          style={{ color: "#666" }}
+          style={{ color: "#999" }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.55 }}
@@ -99,7 +98,7 @@ export default function Hero() {
             <span
               key={trade}
               className="text-xs uppercase tracking-widest font-semibold"
-              style={{ color: "#444" }}
+              style={{ color: "#777" }}
             >
               {trade}
             </span>
@@ -109,7 +108,7 @@ export default function Hero() {
 
       <div
         className="absolute bottom-0 left-0 right-0 h-24 pointer-events-none"
-        style={{ background: "linear-gradient(to bottom, transparent, #0a0404)" }}
+        style={{ background: "linear-gradient(to bottom, transparent, #0a0a0a)" }}
       />
     </section>
   );

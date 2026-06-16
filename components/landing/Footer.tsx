@@ -10,25 +10,25 @@ export default function Footer() {
         <div>
           <p
             className="text-lg font-black"
-            style={{ fontFamily: "var(--font-playfair), Georgia, serif", color: "#ffffff" }}
+            style={{ color: "#ffffff" }}
           >
-            The Website <span style={{ color: "#C9A84C" }}>Builders</span>
+            The Website <span style={{ color: "#A8D507" }}>Builders</span>
           </p>
-          <p className="text-xs mt-1 font-medium" style={{ color: "#444" }}>
+          <p className="text-xs mt-1 font-medium" style={{ color: "#777" }}>
             thewebsitebuilders.au
           </p>
         </div>
 
         <div className="flex items-center gap-8">
-          <Link href="/survey" className="text-xs uppercase tracking-widest font-bold" style={{ color: "#666" }}>
+          <Link href="/survey" className="text-xs uppercase tracking-widest font-bold" style={{ color: "#aaa" }}>
             Get Started
           </Link>
-          <Link href="/admin" className="text-xs uppercase tracking-widest font-bold" style={{ color: "#444" }}>
+          <Link href="/admin" className="text-xs uppercase tracking-widest font-bold" style={{ color: "#666" }}>
             Admin
           </Link>
         </div>
 
-        <p className="text-xs font-medium" style={{ color: "#3a3a3a" }}>
+        <p className="text-xs font-medium" style={{ color: "#777" }}>
           &copy; {new Date().getFullYear()} The Website Builders. All rights reserved.
         </p>
       </div>

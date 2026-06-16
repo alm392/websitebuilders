@@ -39,27 +39,27 @@ export default function AdminLoginPage() {
         <div className="text-center mb-8">
           <p
             className="text-xl font-bold mb-1"
-            style={{ fontFamily: "var(--font-playfair), Georgia, serif", color: "#F5F0E8" }}
+            style={{ color: "#f0f0f0" }}
           >
-            The Website <span style={{ color: "#C9A84C" }}>Builders</span>
+            The Website <span style={{ color: "#A8D507" }}>Builders</span>
           </p>
-          <p className="text-xs uppercase tracking-widest font-medium" style={{ color: "#555" }}>
+          <p className="text-xs uppercase tracking-widest font-medium" style={{ color: "#888" }}>
             Admin Panel
           </p>
         </div>
 
         <div
           className="p-8 rounded-sm"
-          style={{ background: "#111", border: "1px solid rgba(201,168,76,0.15)" }}
+          style={{ background: "#111", border: "1px solid rgba(168,213,7,0.15)" }}
         >
           <div
             className="absolute top-0 left-0 right-0 h-px"
-            style={{ background: "linear-gradient(to right, transparent, rgba(201,168,76,0.5), transparent)" }}
+            style={{ background: "linear-gradient(to right, transparent, rgba(168,213,7,0.5), transparent)" }}
           />
 
           <h1
             className="text-xl font-bold mb-6 text-center"
-            style={{ fontFamily: "var(--font-playfair), Georgia, serif", color: "#F5F0E8" }}
+            style={{ color: "#f0f0f0" }}
           >
             Sign In
           </h1>

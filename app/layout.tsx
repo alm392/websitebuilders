@@ -1,15 +1,10 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Inter } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
-
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  variable: "--font-playfair",
-  display: "swap",
-});
 
 const inter = Inter({
   subsets: ["latin"],
+  weight: ["400", "700", "900"],
   variable: "--font-inter",
   display: "swap",
 });
@@ -29,7 +24,7 @@ export default function RootLayout({
   return (
     <html
       lang="en-AU"
-      className={`${playfair.variable} ${inter.variable}`}
+      className={inter.variable}
     >
       <body className="min-h-screen">{children}</body>
     </html>

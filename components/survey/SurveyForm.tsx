@@ -28,7 +28,7 @@ function ProgressBar({ step }: { step: number }) {
   return (
     <div className="mb-10">
       <div className="flex items-center justify-between mb-2">
-        <span className="text-xs uppercase tracking-widest font-bold" style={{ color: "#C9A84C" }}>
+        <span className="text-xs uppercase tracking-widest font-bold" style={{ color: "#A8D507" }}>
           Step {step} of {TOTAL_STEPS}
         </span>
         <span className="text-xs font-medium" style={{ color: "#aaa" }}>
@@ -40,7 +40,7 @@ function ProgressBar({ step }: { step: number }) {
           className="h-full rounded-full transition-all duration-500 ease-out"
           style={{
             width: `${(step / TOTAL_STEPS) * 100}%`,
-            background: "linear-gradient(to right, #C9A84C, #E0C070)",
+            background: "linear-gradient(to right, #A8D507, #cff128)",
           }}
         />
       </div>
@@ -60,7 +60,7 @@ function Label({ children }: { children: React.ReactNode }) {
 }
 
 function RequiredMark() {
-  return <span style={{ color: "#C9A84C" }}> *</span>;
+  return <span style={{ color: "#A8D507" }}> *</span>;
 }
 
 export default function SurveyForm() {
@@ -168,13 +168,13 @@ export default function SurveyForm() {
       >
         <div
           className="w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center text-2xl"
-          style={{ background: "rgba(201,168,76,0.15)", border: "1px solid rgba(201,168,76,0.4)" }}
+          style={{ background: "rgba(168,213,7,0.15)", border: "1px solid rgba(168,213,7,0.4)" }}
         >
           &#10003;
         </div>
         <h2
           className="font-black mb-4"
-          style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.8rem, 4vw, 2.5rem)", color: "#111111" }}
+          style={{ fontSize: "clamp(1.8rem, 4vw, 2.5rem)", color: "#111111" }}
         >
           You&apos;re on the list.
         </h2>
@@ -184,7 +184,7 @@ export default function SurveyForm() {
         </p>
         <p className="text-sm" style={{ color: "#888" }}>
           Keep an eye on your inbox at{" "}
-          <span style={{ color: "#C9A84C", fontWeight: 700 }}>{form.email}</span>.
+          <span style={{ color: "#A8D507", fontWeight: 700 }}>{form.email}</span>.
         </p>
       </motion.div>
     );
@@ -209,7 +209,7 @@ export default function SurveyForm() {
               <div>
                 <h2
                   className="text-2xl sm:text-3xl font-bold mb-2"
-                  style={{ fontFamily: "var(--font-playfair), Georgia, serif", color: "#111111" }}
+                  style={{ color: "#111111" }}
                 >
                   Let&apos;s start with your details
                 </h2>
@@ -256,7 +256,7 @@ export default function SurveyForm() {
               <div>
                 <h2
                   className="font-black mb-2"
-                  style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.5rem, 3.5vw, 2rem)", color: "#111111" }}
+                  style={{ fontSize: "clamp(1.5rem, 3.5vw, 2rem)", color: "#111111" }}
                 >
                   Tell us about your business
                 </h2>
@@ -293,7 +293,7 @@ export default function SurveyForm() {
               <div>
                 <h2
                   className="font-black mb-2"
-                  style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.5rem, 3.5vw, 2rem)", color: "#111111" }}
+                  style={{ fontSize: "clamp(1.5rem, 3.5vw, 2rem)", color: "#111111" }}
                 >
                   Do you have any social media?
                 </h2>
@@ -340,7 +340,7 @@ export default function SurveyForm() {
               <div>
                 <h2
                   className="font-black mb-2"
-                  style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.5rem, 3.5vw, 2rem)", color: "#111111" }}
+                  style={{ fontSize: "clamp(1.5rem, 3.5vw, 2rem)", color: "#111111" }}
                 >
                   What are you looking for in a website?
                 </h2>

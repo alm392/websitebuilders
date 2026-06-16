@@ -50,7 +50,6 @@ export default function Benefits() {
           <h2
             className="font-black leading-tight mb-4"
             style={{
-              fontFamily: "var(--font-playfair), Georgia, serif",
               fontSize: "clamp(2rem, 4.5vw, 3.5rem)",
               color: "#111111",
             }}
@@ -80,17 +79,17 @@ export default function Benefits() {
             >
               <p
                 className="text-4xl font-black mb-5"
-                style={{ color: "#ececec", fontFamily: "var(--font-playfair), Georgia, serif" }}
+                style={{ color: "#A8D507", opacity: 0.5 }}
               >
                 {b.num}
               </p>
               <h3
                 className="text-lg font-black mb-3"
-                style={{ fontFamily: "var(--font-playfair), Georgia, serif", color: "#111111" }}
+                style={{ color: "#111111" }}
               >
                 {b.title}
               </h3>
-              <p className="text-sm leading-relaxed" style={{ color: "#666" }}>
+              <p className="text-sm leading-relaxed" style={{ color: "#555" }}>
                 {b.body}
               </p>
             </motion.div>

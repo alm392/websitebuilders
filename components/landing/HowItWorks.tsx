@@ -36,7 +36,6 @@ export default function HowItWorks() {
           <h2
             className="font-black leading-tight"
             style={{
-              fontFamily: "var(--font-playfair), Georgia, serif",
               fontSize: "clamp(2rem, 4.5vw, 3.5rem)",
               color: "#ffffff",
             }}
@@ -48,7 +47,7 @@ export default function HowItWorks() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-0 relative">
           <div
             className="hidden lg:block absolute top-10 left-[16.66%] right-[16.66%] h-px"
-            style={{ background: "linear-gradient(to right, rgba(201,168,76,0.4), rgba(201,168,76,0.4))" }}
+            style={{ background: "linear-gradient(to right, rgba(168,213,7,0.4), rgba(168,213,7,0.4))" }}
           />
 
           {steps.map((step, i) => (
@@ -63,9 +62,8 @@ export default function HowItWorks() {
               <div
                 className="w-12 h-12 flex items-center justify-center text-lg font-black mb-6 relative z-10"
                 style={{
-                  background: "linear-gradient(135deg, #C9A84C 0%, #E8CB6A 100%)",
+                  background: "linear-gradient(135deg, #A8D507 0%, #cff128 100%)",
                   color: "#0a0404",
-                  fontFamily: "var(--font-playfair), Georgia, serif",
                   borderRadius: "3px",
                 }}
               >
@@ -73,11 +71,11 @@ export default function HowItWorks() {
               </div>
               <h3
                 className="text-xl font-black mb-4"
-                style={{ fontFamily: "var(--font-playfair), Georgia, serif", color: "#ffffff" }}
+                style={{ color: "#ffffff" }}
               >
                 {step.title}
               </h3>
-              <p className="text-sm leading-relaxed" style={{ color: "#999" }}>
+              <p className="text-sm leading-relaxed" style={{ color: "#bbb" }}>
                 {step.body}
               </p>
             </motion.div>

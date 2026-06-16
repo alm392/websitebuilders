@@ -55,7 +55,6 @@ export default function FAQ() {
           <h2
             className="font-black leading-tight"
             style={{
-              fontFamily: "var(--font-playfair), Georgia, serif",
               fontSize: "clamp(2rem, 4.5vw, 3.5rem)",
               color: "#111111",
             }}
@@ -83,8 +82,7 @@ export default function FAQ() {
                 <span
                   className="text-base font-black leading-snug"
                   style={{
-                    fontFamily: "var(--font-playfair), Georgia, serif",
-                    color: open === i ? "#C9A84C" : "#111111",
+                    color: open === i ? "#A8D507" : "#111111",
                     transition: "color 0.2s",
                   }}
                 >
@@ -92,7 +90,7 @@ export default function FAQ() {
                 </span>
                 <span
                   className="flex-shrink-0 mt-0.5 text-xl font-light"
-                  style={{ color: "#C9A84C" }}
+                  style={{ color: "#A8D507" }}
                 >
                   {open === i ? "−" : "+"}
                 </span>

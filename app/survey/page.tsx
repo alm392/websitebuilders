@@ -18,11 +18,11 @@ export default function SurveyPage() {
           <Link
             href="/"
             className="text-lg font-black"
-            style={{ fontFamily: "var(--font-playfair), Georgia, serif", color: "#ffffff" }}
+            style={{ color: "#ffffff" }}
           >
-            The Website <span style={{ color: "#C9A84C" }}>Builders</span>
+            The Website <span style={{ color: "#A8D507" }}>Builders</span>
           </Link>
-          <p className="text-xs hidden sm:block font-semibold uppercase tracking-widest" style={{ color: "#555" }}>
+          <p className="text-xs hidden sm:block font-semibold uppercase tracking-widest" style={{ color: "#888" }}>
             Free Strategy Call
           </p>
         </div>
@@ -34,7 +34,6 @@ export default function SurveyPage() {
           <h1
             className="font-black"
             style={{
-              fontFamily: "var(--font-playfair), Georgia, serif",
               fontSize: "clamp(1.8rem, 4vw, 2.8rem)",
               color: "#111111",
             }}

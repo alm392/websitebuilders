@@ -44,7 +44,7 @@ export default function UrgencyBar() {
   return (
     <div
       style={{
-        background: "#C9A84C",
+        background: "#A8D507",
         borderBottom: "none",
       }}
       className="relative z-50 py-2.5 px-4"
@@ -76,7 +76,7 @@ export default function UrgencyBar() {
         <Link
           href="/survey"
           className="hidden sm:block text-xs font-black uppercase tracking-widest px-4 py-1.5 rounded-sm"
-          style={{ background: "#0a0404", color: "#C9A84C" }}
+          style={{ background: "#0a0404", color: "#A8D507" }}
         >
           Claim Now
         </Link>

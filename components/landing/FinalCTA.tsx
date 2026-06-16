@@ -22,14 +22,13 @@ export default function FinalCTA() {
           <h2
             className="font-black leading-[1.05] mb-6"
             style={{
-              fontFamily: "var(--font-playfair), Georgia, serif",
               fontSize: "clamp(2.2rem, 5vw, 4rem)",
               color: "#ffffff",
             }}
           >
             Ready to Get the Website Your Business Deserves?
           </h2>
-          <p className="text-base mb-10 leading-relaxed max-w-xl mx-auto" style={{ color: "#999" }}>
+          <p className="text-base mb-10 leading-relaxed max-w-xl mx-auto" style={{ color: "#bbb" }}>
             Take 2 minutes to tell us about your business. Our team reviews every
             submission personally and reaches out to book a free strategy call.
           </p>
@@ -38,7 +37,7 @@ export default function FinalCTA() {
             Book My Free Strategy Call
           </Link>
 
-          <p className="mt-6 text-xs" style={{ color: "#555" }}>
+          <p className="mt-6 text-xs" style={{ color: "#888" }}>
             $500 this week only. Returns to $1,500. Full build, SEO, content and hosting included.
           </p>
         </motion.div>
