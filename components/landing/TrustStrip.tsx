@@ -28,7 +28,7 @@ export default function TrustStrip() {
             >
               {item}
             </span>
-            <span style={{ color: "#A8D507", fontSize: "8px" }}>&#9670;</span>
+            <span style={{ color: "#D4AF37", fontSize: "8px" }}>&#9670;</span>
           </span>
         ))}
       </div>

@@ -12,7 +12,7 @@ export default function Footer() {
             className="text-lg font-black"
             style={{ color: "#ffffff" }}
           >
-            The Website <span style={{ color: "#A8D507" }}>Builders</span>
+            The Website <span style={{ color: "#D4AF37" }}>Builders</span>
           </p>
           <p className="text-xs mt-1 font-medium" style={{ color: "#777" }}>
             thewebsitebuilders.au

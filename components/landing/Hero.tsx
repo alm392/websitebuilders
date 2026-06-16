@@ -54,14 +54,14 @@ export default function Hero() {
         >
           <span
             className="text-sm font-bold px-4 py-2 rounded-sm"
-            style={{ background: "rgba(168,213,7,0.12)", border: "1.5px solid rgba(168,213,7,0.35)", color: "#A8D507" }}
+            style={{ background: "rgba(212,175,55,0.12)", border: "1.5px solid rgba(212,175,55,0.35)", color: "#D4AF37" }}
           >
             $500 one-time build
           </span>
           <span style={{ color: "#888" }} className="text-sm font-bold">+</span>
           <span
             className="text-sm font-bold px-4 py-2 rounded-sm"
-            style={{ background: "rgba(168,213,7,0.12)", border: "1.5px solid rgba(168,213,7,0.35)", color: "#A8D507" }}
+            style={{ background: "rgba(212,175,55,0.12)", border: "1.5px solid rgba(212,175,55,0.35)", color: "#D4AF37" }}
           >
             $50/month maintenance
           </span>

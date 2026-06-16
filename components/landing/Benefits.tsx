@@ -79,7 +79,7 @@ export default function Benefits() {
             >
               <p
                 className="text-4xl font-black mb-5"
-                style={{ color: "#A8D507", opacity: 0.5 }}
+                style={{ color: "#D4AF37", opacity: 0.5 }}
               >
                 {b.num}
               </p>

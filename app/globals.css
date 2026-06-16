@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-lime: #A8D507;
-  --color-lime-light: #cff128;
+  --color-lime: #D4AF37;
+  --color-lime-light: #E8C84A;
   --color-dark: #0a0404;
   --color-dark-2: #1a1a1a;
   --color-surface-dark: #141414;
@@ -14,7 +14,7 @@
   --color-muted: #666666;
   --color-muted-light: #999999;
   --color-warm: #f0f0f0;
-  --color-lime-muted: rgba(168,213,7,0.2);
+  --color-lime-muted: rgba(212,175,55,0.2);
   --font-sans: var(--font-inter);
 }
 
@@ -39,14 +39,14 @@ h1, h2, h3, h4 {
 }
 
 .lime-text {
-  background: linear-gradient(135deg, #A8D507 0%, #cff128 50%, #A8D507 100%);
+  background: linear-gradient(135deg, #D4AF37 0%, #E8C84A 50%, #D4AF37 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .gold-text {
-  background: linear-gradient(135deg, #A8D507 0%, #cff128 50%, #A8D507 100%);
+  background: linear-gradient(135deg, #D4AF37 0%, #E8C84A 50%, #D4AF37 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -68,13 +68,13 @@ h1, h2, h3, h4 {
 }
 
 .hero-glow {
-  background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(168, 213, 7, 0.15) 0%, transparent 70%);
+  background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(212, 175, 55, 0.15) 0%, transparent 70%);
 }
 
 .grid-overlay {
   background-image:
-    linear-gradient(rgba(168,213,7,0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(168,213,7,0.04) 1px, transparent 1px);
+    linear-gradient(rgba(212,175,55,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(212,175,55,0.04) 1px, transparent 1px);
   background-size: 60px 60px;
 }
 
@@ -83,7 +83,7 @@ h1, h2, h3, h4 {
 }
 .card-hover-dark:hover {
   transform: translateY(-3px);
-  box-shadow: 0 12px 40px rgba(168, 213, 7, 0.12);
+  box-shadow: 0 12px 40px rgba(212, 175, 55, 0.12);
 }
 
 .card-hover-light {
@@ -98,7 +98,7 @@ h1, h2, h3, h4 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #A8D507 0%, #cff128 100%);
+  background: linear-gradient(135deg, #D4AF37 0%, #E8C84A 100%);
   color: #0a0404;
   font-weight: 900;
   font-family: var(--font-inter), system-ui, sans-serif;
@@ -116,7 +116,7 @@ h1, h2, h3, h4 {
 .btn-primary:hover {
   opacity: 0.92;
   transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(168, 213, 7, 0.4);
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
 }
 
 .btn-outline-dark {
@@ -124,7 +124,7 @@ h1, h2, h3, h4 {
   align-items: center;
   justify-content: center;
   background: transparent;
-  color: #A8D507;
+  color: #D4AF37;
   font-weight: 700;
   font-family: var(--font-inter), system-ui, sans-serif;
   letter-spacing: 0.08em;
@@ -132,15 +132,15 @@ h1, h2, h3, h4 {
   font-size: 0.75rem;
   padding: 1rem 2.2rem;
   border-radius: 3px;
-  border: 1.5px solid rgba(168, 213, 7, 0.5);
+  border: 1.5px solid rgba(212, 175, 55, 0.5);
   transition: border-color 0.2s ease, background 0.2s ease;
   cursor: pointer;
   text-decoration: none;
   white-space: nowrap;
 }
 .btn-outline-dark:hover {
-  border-color: #A8D507;
-  background: rgba(168, 213, 7, 0.1);
+  border-color: #D4AF37;
+  background: rgba(212, 175, 55, 0.1);
 }
 
 .btn-outline-light {
@@ -180,7 +180,7 @@ h1, h2, h3, h4 {
   outline: none;
 }
 .input-field:focus {
-  border-color: #A8D507;
+  border-color: #D4AF37;
   background: #fff;
 }
 .input-field::placeholder {
@@ -190,11 +190,11 @@ h1, h2, h3, h4 {
 /* Dark-mode override for admin and survey */
 .dark-input .input-field {
   background: #111111;
-  border-color: rgba(168,213,7,0.2);
+  border-color: rgba(212,175,55,0.2);
   color: #f0f0f0;
 }
 .dark-input .input-field:focus {
-  border-color: #A8D507;
+  border-color: #D4AF37;
 }
 .dark-input .input-field::placeholder {
   color: #555;
@@ -213,7 +213,7 @@ h1, h2, h3, h4 {
   font-weight: 700;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: #A8D507;
+  color: #D4AF37;
   margin-bottom: 1rem;
   display: block;
 }
@@ -221,6 +221,6 @@ h1, h2, h3, h4 {
 .divider-gold {
   height: 2px;
   width: 60px;
-  background: linear-gradient(to right, #A8D507, #cff128);
+  background: linear-gradient(to right, #D4AF37, #E8C84A);
   border-radius: 2px;
 }

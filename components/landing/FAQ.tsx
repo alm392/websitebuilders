@@ -82,7 +82,7 @@ export default function FAQ() {
                 <span
                   className="text-base font-black leading-snug"
                   style={{
-                    color: open === i ? "#A8D507" : "#111111",
+                    color: open === i ? "#D4AF37" : "#111111",
                     transition: "color 0.2s",
                   }}
                 >
@@ -90,7 +90,7 @@ export default function FAQ() {
                 </span>
                 <span
                   className="flex-shrink-0 mt-0.5 text-xl font-light"
-                  style={{ color: "#A8D507" }}
+                  style={{ color: "#D4AF37" }}
                 >
                   {open === i ? "−" : "+"}
                 </span>

@@ -28,7 +28,7 @@ function ProgressBar({ step }: { step: number }) {
   return (
     <div className="mb-10">
       <div className="flex items-center justify-between mb-2">
-        <span className="text-xs uppercase tracking-widest font-bold" style={{ color: "#A8D507" }}>
+        <span className="text-xs uppercase tracking-widest font-bold" style={{ color: "#D4AF37" }}>
           Step {step} of {TOTAL_STEPS}
         </span>
         <span className="text-xs font-medium" style={{ color: "#aaa" }}>
@@ -40,7 +40,7 @@ function ProgressBar({ step }: { step: number }) {
           className="h-full rounded-full transition-all duration-500 ease-out"
           style={{
             width: `${(step / TOTAL_STEPS) * 100}%`,
-            background: "linear-gradient(to right, #A8D507, #cff128)",
+            background: "linear-gradient(to right, #D4AF37, #E8C84A)",
           }}
         />
       </div>
@@ -60,7 +60,7 @@ function Label({ children }: { children: React.ReactNode }) {
 }
 
 function RequiredMark() {
-  return <span style={{ color: "#A8D507" }}> *</span>;
+  return <span style={{ color: "#D4AF37" }}> *</span>;
 }
 
 export default function SurveyForm() {
@@ -168,7 +168,7 @@ export default function SurveyForm() {
       >
         <div
           className="w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center text-2xl"
-          style={{ background: "rgba(168,213,7,0.15)", border: "1px solid rgba(168,213,7,0.4)" }}
+          style={{ background: "rgba(212,175,55,0.15)", border: "1px solid rgba(212,175,55,0.4)" }}
         >
           &#10003;
         </div>
@@ -184,7 +184,7 @@ export default function SurveyForm() {
         </p>
         <p className="text-sm" style={{ color: "#888" }}>
           Keep an eye on your inbox at{" "}
-          <span style={{ color: "#A8D507", fontWeight: 700 }}>{form.email}</span>.
+          <span style={{ color: "#D4AF37", fontWeight: 700 }}>{form.email}</span>.
         </p>
       </motion.div>
     );

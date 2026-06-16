@@ -47,7 +47,7 @@ export default function HowItWorks() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-0 relative">
           <div
             className="hidden lg:block absolute top-10 left-[16.66%] right-[16.66%] h-px"
-            style={{ background: "linear-gradient(to right, rgba(168,213,7,0.4), rgba(168,213,7,0.4))" }}
+            style={{ background: "linear-gradient(to right, rgba(212,175,55,0.4), rgba(212,175,55,0.4))" }}
           />
 
           {steps.map((step, i) => (
@@ -62,7 +62,7 @@ export default function HowItWorks() {
               <div
                 className="w-12 h-12 flex items-center justify-center text-lg font-black mb-6 relative z-10"
                 style={{
-                  background: "linear-gradient(135deg, #A8D507 0%, #cff128 100%)",
+                  background: "linear-gradient(135deg, #D4AF37 0%, #E8C84A 100%)",
                   color: "#0a0404",
                   borderRadius: "3px",
                 }}

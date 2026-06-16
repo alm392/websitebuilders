@@ -61,11 +61,11 @@ export default function Services() {
             >
               <div
                 className="absolute top-0 left-8 w-10 h-[3px]"
-                style={{ background: "linear-gradient(to right, #A8D507, #cff128)" }}
+                style={{ background: "linear-gradient(to right, #D4AF37, #E8C84A)" }}
               />
               <span
                 className="inline-block text-xs uppercase tracking-widest font-black mb-5 mt-3"
-                style={{ color: "#A8D507" }}
+                style={{ color: "#D4AF37" }}
               >
                 Optional Feature
               </span>

@@ -44,7 +44,7 @@ export default function UrgencyBar() {
   return (
     <div
       style={{
-        background: "#A8D507",
+        background: "#D4AF37",
         borderBottom: "none",
       }}
       className="relative z-50 py-2.5 px-4"
@@ -62,7 +62,7 @@ export default function UrgencyBar() {
         {mounted && (
           <div
             className="flex items-center gap-1 font-mono text-sm font-black"
-            style={{ color: "#0a0404" }}
+            style={{ color: "#ffffff" }}
           >
             <span className="bg-black bg-opacity-15 px-2 py-0.5 rounded-sm">{pad(timeLeft.days)}d</span>
             <span>:</span>
@@ -76,7 +76,7 @@ export default function UrgencyBar() {
         <Link
           href="/survey"
           className="hidden sm:block text-xs font-black uppercase tracking-widest px-4 py-1.5 rounded-sm"
-          style={{ background: "#0a0404", color: "#A8D507" }}
+          style={{ background: "#0a0404", color: "#D4AF37" }}
         >
           Claim Now
         </Link>
