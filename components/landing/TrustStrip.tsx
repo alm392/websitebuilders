@@ -6,7 +6,7 @@ const items = [
   "Australian Owned",
   "Professional Content Included",
   "Ongoing Support",
-  "Fast Turnaround",
+  "7–14 Day Delivery",
   "Mobile Responsive",
   "Google Ready",
 ];
@@ -16,19 +16,25 @@ export default function TrustStrip() {
 
   return (
     <div
-      className="overflow-hidden py-4 section-light-alt"
-      style={{ borderTop: "1px solid #e8e8e8", borderBottom: "1px solid #e8e8e8" }}
+      className="overflow-hidden py-4"
+      style={{
+        background: "#0f0f0f",
+        borderTop: "1px solid rgba(212,175,55,0.1)",
+        borderBottom: "1px solid rgba(212,175,55,0.1)",
+      }}
     >
       <div className="scrolling-track flex items-center gap-10 whitespace-nowrap w-max">
         {doubled.map((item, i) => (
           <span key={i} className="flex items-center gap-4">
             <span
-              className="text-xs uppercase tracking-[0.2em] font-bold"
-              style={{ color: "#555" }}
+              className="text-[0.58rem] uppercase tracking-[0.22em] font-semibold"
+              style={{ color: "#6a6057" }}
             >
               {item}
             </span>
-            <span style={{ color: "#D4AF37", fontSize: "8px" }}>&#9670;</span>
+            <span style={{ color: "rgba(212,175,55,0.45)", fontSize: 6 }}>
+              &#9670;
+            </span>
           </span>
         ))}
       </div>

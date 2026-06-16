@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 const faqs = [
   {
     q: "What does 'you don't pay until you love it' actually mean?",
-    a: "It means exactly that. We build your complete website, including all design, content, and functionality, before you pay us a cent. Once you see the finished product and love it, then you pay. If you have any changes, we make them until it's perfect. You only pay when you're genuinely happy.",
+    a: "It means exactly that. We build your complete website — including all design, content, and functionality — before you pay a single cent. Once you see the finished product and love it, then you pay. If you have any changes, we make them until it's perfect.",
   },
   {
     q: "How long does it take to build my website?",
@@ -14,11 +14,11 @@ const faqs = [
   },
   {
     q: "What if I don't have any photos or content?",
-    a: "Not a problem at all. Our creative team handles everything. We write the copy, create professional graphics, and ensure your site looks credible and compelling for your trade. We don't need anything from you to get started.",
+    a: "Not a problem at all. Our creative team handles everything. We write the copy, create professional graphics, and ensure your site looks credible and compelling for your trade.",
   },
   {
     q: "What's included in the $50 per month?",
-    a: "Ongoing hosting, website maintenance, security updates, and unlimited content changes. New service added? Prices changed? Need to upload new photos? Just send us a message and we handle it. No hourly rates, no invoices per change.",
+    a: "Ongoing hosting, website maintenance, security updates, and unlimited content changes. New service added? Prices changed? Need to upload new photos? Just send us a message and we handle it.",
   },
   {
     q: "Are there any lock-in contracts?",
@@ -38,62 +38,80 @@ const faqs = [
   },
 ];
 
+const EASE = [0.25, 0.4, 0.25, 1] as const;
+
 export default function FAQ() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section className="py-16 sm:py-24 px-5 sm:px-6 lg:px-10 section-light-alt">
+    <section className="py-20 sm:py-32 px-5 sm:px-6 lg:px-10 section-light-alt">
       <div className="max-w-3xl mx-auto">
+        {/* Header */}
         <motion.div
           className="mb-14"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.7, ease: EASE }}
         >
-          <span className="section-label">Common Questions</span>
+          <span className="section-label mb-4">Common Questions</span>
           <h2
             className="font-black leading-tight"
             style={{
-              fontSize: "clamp(2rem, 4.5vw, 3.5rem)",
-              color: "#111111",
+              fontSize: "clamp(2.2rem, 5vw, 3.8rem)",
+              color: "#0f0f0f",
             }}
           >
             Everything You Want to Know
           </h2>
         </motion.div>
 
-        <div className="flex flex-col">
+        {/* Items */}
+        <div>
           {faqs.map((faq, i) => (
             <motion.div
               key={i}
-              className="border-b"
-              style={{ borderColor: "#e0e0e0" }}
+              style={{ borderBottom: "1px solid #e2e2e2" }}
               initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.35, delay: i * 0.04 }}
+              transition={{ duration: 0.4, delay: i * 0.04, ease: EASE }}
             >
               <button
                 onClick={() => setOpen(open === i ? null : i)}
-                className="w-full flex items-start justify-between gap-4 py-6 text-left"
+                className="w-full flex items-start justify-between gap-5 py-5 sm:py-6 text-left group"
                 aria-expanded={open === i}
               >
                 <span
-                  className="text-base font-black leading-snug"
-                  style={{
-                    color: open === i ? "#D4AF37" : "#111111",
-                    transition: "color 0.2s",
-                  }}
+                  className="text-[0.9rem] sm:text-base font-bold leading-snug transition-colors duration-200"
+                  style={{ color: open === i ? "#D4AF37" : "#0f0f0f" }}
                 >
                   {faq.q}
                 </span>
-                <span
-                  className="flex-shrink-0 mt-0.5 text-xl font-light"
+
+                {/* Animated chevron */}
+                <motion.span
+                  className="flex-shrink-0 mt-0.5 w-5 h-5 flex items-center justify-center"
+                  animate={{ rotate: open === i ? 180 : 0 }}
+                  transition={{ duration: 0.3, ease: EASE }}
                   style={{ color: "#D4AF37" }}
                 >
-                  {open === i ? "−" : "+"}
-                </span>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    aria-hidden
+                  >
+                    <path
+                      d="M3 6l5 5 5-5"
+                      stroke="currentColor"
+                      strokeWidth="1.6"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </motion.span>
               </button>
 
               <AnimatePresence initial={false}>
@@ -102,10 +120,13 @@ export default function FAQ() {
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: "auto", opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.28 }}
+                    transition={{ duration: 0.32, ease: EASE }}
                     style={{ overflow: "hidden" }}
                   >
-                    <p className="pb-6 text-sm leading-relaxed" style={{ color: "#666" }}>
+                    <p
+                      className="pb-6 text-[0.85rem] leading-relaxed font-light"
+                      style={{ color: "#666" }}
+                    >
                       {faq.a}
                     </p>
                   </motion.div>

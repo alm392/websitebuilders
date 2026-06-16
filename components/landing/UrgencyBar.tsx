@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import Link from "next/link";
 
 interface TimeLeft {
@@ -11,7 +12,12 @@ interface TimeLeft {
 }
 
 export default function UrgencyBar() {
-  const [timeLeft, setTimeLeft] = useState<TimeLeft>({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+  const [timeLeft, setTimeLeft] = useState<TimeLeft>({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -43,39 +49,59 @@ export default function UrgencyBar() {
 
   return (
     <div
-      style={{
-        background: "#D4AF37",
-        borderBottom: "none",
-      }}
-      className="relative z-50 py-2.5 px-4"
+      className="relative z-50 py-2.5 px-4 overflow-hidden"
+      style={{ background: "#D4AF37" }}
     >
-      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 text-center">
+      {/* Subtle shimmer sweep */}
+      <motion.div
+        className="absolute inset-y-0 w-48 pointer-events-none"
+        style={{
+          background:
+            "linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent)",
+          transform: "skewX(-20deg)",
+        }}
+        animate={{ x: ["-200%", "600%"] }}
+        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", repeatDelay: 3 }}
+      />
+
+      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 text-center relative">
         <p
-          className="text-xs sm:text-sm font-bold tracking-wide"
+          className="text-[0.75rem] sm:text-sm font-bold tracking-wide"
           style={{ color: "#0a0404" }}
         >
           <span className="font-black">THIS WEEK ONLY:</span>{" "}
           Full website build for{" "}
-          <span className="font-black underline">$500</span>
-          {" "}(normally $1,500). Offer expires in:
+          <span className="font-black underline">$500</span>{" "}
+          (normally $1,500). Offer expires in:
         </p>
+
         {mounted && (
           <div
             className="flex items-center gap-1 font-mono text-sm font-black"
-            style={{ color: "#ffffff" }}
+            style={{ color: "#fff" }}
           >
-            <span className="bg-black bg-opacity-15 px-2 py-0.5 rounded-sm">{pad(timeLeft.days)}d</span>
-            <span>:</span>
-            <span className="bg-black bg-opacity-15 px-2 py-0.5 rounded-sm">{pad(timeLeft.hours)}h</span>
-            <span>:</span>
-            <span className="bg-black bg-opacity-15 px-2 py-0.5 rounded-sm">{pad(timeLeft.minutes)}m</span>
-            <span>:</span>
-            <span className="bg-black bg-opacity-15 px-2 py-0.5 rounded-sm">{pad(timeLeft.seconds)}s</span>
+            {[
+              { val: timeLeft.days, label: "d" },
+              { val: timeLeft.hours, label: "h" },
+              { val: timeLeft.minutes, label: "m" },
+              { val: timeLeft.seconds, label: "s" },
+            ].map(({ val, label }, i) => (
+              <span key={label} className="flex items-center gap-1">
+                {i > 0 && <span style={{ opacity: 0.6 }}>:</span>}
+                <span
+                  className="px-1.5 py-0.5 rounded-sm tabular-nums"
+                  style={{ background: "rgba(0,0,0,0.18)" }}
+                >
+                  {pad(val)}{label}
+                </span>
+              </span>
+            ))}
           </div>
         )}
+
         <Link
           href="/survey"
-          className="text-xs font-black uppercase tracking-widest px-4 py-1.5 rounded-sm"
+          className="text-[0.62rem] font-black uppercase tracking-widest px-3.5 py-1.5 rounded-sm shrink-0"
           style={{ background: "#0a0404", color: "#D4AF37" }}
         >
           Claim Now

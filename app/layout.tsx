@@ -4,7 +4,7 @@ import "./globals.css";
 
 const inter = Inter({
   subsets: ["latin"],
-  weight: ["400", "700", "900"],
+  weight: ["300", "400", "700", "900"],
   variable: "--font-inter",
   display: "swap",
 });
@@ -28,10 +28,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en-AU"
-      className={inter.variable}
-    >
+    <html lang="en-AU" className={inter.variable}>
       <body className="min-h-screen">{children}</body>
     </html>
   );
