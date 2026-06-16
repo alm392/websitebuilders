@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function FinalCTA() {
   return (
-    <section className="py-28 px-6 lg:px-10 section-dark relative overflow-hidden">
+    <section className="py-16 sm:py-28 px-5 sm:px-6 lg:px-10 section-dark relative overflow-hidden">
       <div
         className="absolute inset-0 pointer-events-none hero-glow"
         style={{ opacity: 0.7 }}
@@ -33,7 +33,7 @@ export default function FinalCTA() {
             submission personally and reaches out to book a free strategy call.
           </p>
 
-          <Link href="/survey" className="btn-primary text-sm px-14 py-5">
+          <Link href="/survey" className="btn-primary text-sm px-8 sm:px-14 py-4 sm:py-5 w-full sm:w-auto text-center">
             Book My Free Strategy Call
           </Link>
 

@@ -10,7 +10,7 @@ export default function Hero() {
     >
       <div className="hero-glow grid-overlay absolute inset-0 pointer-events-none" />
 
-      <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-10 text-center py-28">
+      <div className="relative z-10 max-w-5xl mx-auto px-5 lg:px-10 text-center py-16 sm:py-24 lg:py-28">
         <motion.p
           className="section-label"
           initial={{ opacity: 0, y: 16 }}
@@ -71,9 +71,9 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.38 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
+          className="flex flex-col items-stretch sm:items-center justify-center gap-4"
         >
-          <Link href="/survey" className="btn-primary text-sm px-12 py-5">
+          <Link href="/survey" className="btn-primary text-sm px-8 sm:px-12 py-4 sm:py-5 text-center">
             Claim Your $500 Website Now
           </Link>
         </motion.div>
@@ -89,7 +89,7 @@ export default function Hero() {
         </motion.p>
 
         <motion.div
-          className="mt-20 flex flex-wrap items-center justify-center gap-8"
+          className="mt-12 sm:mt-20 flex flex-wrap items-center justify-center gap-4 sm:gap-8"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.65 }}

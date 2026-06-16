@@ -28,8 +28,8 @@ export default function SurveyPage() {
         </div>
       </div>
 
-      <div className="max-w-2xl mx-auto px-6 lg:px-10 py-16">
-        <div className="mb-10 text-center">
+      <div className="max-w-2xl mx-auto px-5 sm:px-6 lg:px-10 py-10 sm:py-16">
+        <div className="mb-8 sm:mb-10 text-center">
           <span className="section-label">Book Your Free Call</span>
           <h1
             className="font-black"
@@ -46,7 +46,7 @@ export default function SurveyPage() {
         </div>
 
         <div
-          className="p-8 sm:p-10 rounded-sm"
+          className="p-5 sm:p-10 rounded-sm"
           style={{ background: "#ffffff", border: "1.5px solid #e8e8e8", boxShadow: "0 4px 40px rgba(0,0,0,0.06)" }}
         >
           <SurveyForm />

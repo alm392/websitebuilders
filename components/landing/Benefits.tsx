@@ -37,7 +37,7 @@ const benefits = [
 
 export default function Benefits() {
   return (
-    <section className="py-24 px-6 lg:px-10 section-light">
+    <section className="py-16 sm:py-24 px-5 sm:px-6 lg:px-10 section-light">
       <div className="max-w-7xl mx-auto">
         <motion.div
           className="mb-16"
@@ -63,11 +63,11 @@ export default function Benefits() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-8">
           {benefits.map((b, i) => (
             <motion.div
               key={b.num}
-              className="card-hover-light p-8 rounded-sm"
+              className="card-hover-light p-6 sm:p-8 rounded-sm"
               style={{
                 background: "#fafafa",
                 border: "1.5px solid #ebebeb",

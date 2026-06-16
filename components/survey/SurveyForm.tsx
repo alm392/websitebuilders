@@ -194,7 +194,7 @@ export default function SurveyForm() {
     <div>
       <ProgressBar step={step} />
 
-      <div className="relative overflow-hidden" style={{ minHeight: "360px" }}>
+      <div className="relative overflow-hidden" style={{ minHeight: "280px" }}>
         <AnimatePresence mode="wait" custom={direction}>
           <motion.div
             key={step}
@@ -373,11 +373,11 @@ export default function SurveyForm() {
         </p>
       )}
 
-      <div className="flex items-center justify-between mt-8 pt-6" style={{ borderTop: "1px solid #ebebeb" }}>
+      <div className="flex flex-col-reverse sm:flex-row items-stretch sm:items-center justify-between gap-3 mt-8 pt-6" style={{ borderTop: "1px solid #ebebeb" }}>
         <button
           onClick={back}
           disabled={step === 1}
-          className="btn-outline-light text-xs"
+          className="btn-outline-light text-xs text-center"
           style={{ opacity: step === 1 ? 0 : 1, pointerEvents: step === 1 ? "none" : "auto" }}
         >
           Back
@@ -386,7 +386,7 @@ export default function SurveyForm() {
         <button
           onClick={handleNext}
           disabled={submitting}
-          className="btn-primary text-xs"
+          className="btn-primary text-xs text-center"
         >
           {submitting
             ? "Submitting..."

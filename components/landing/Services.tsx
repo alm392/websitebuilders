@@ -19,7 +19,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="py-24 px-6 lg:px-10 section-light">
+    <section className="py-16 sm:py-24 px-5 sm:px-6 lg:px-10 section-light">
       <div className="max-w-7xl mx-auto">
         <motion.div
           className="mb-16"
@@ -45,11 +45,11 @@ export default function Services() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 sm:gap-6">
           {services.map((s, i) => (
             <motion.div
               key={s.title}
-              className="card-hover-light p-8 rounded-sm relative"
+              className="card-hover-light p-6 sm:p-8 rounded-sm relative"
               style={{
                 background: "#fafafa",
                 border: "1.5px solid #ebebeb",

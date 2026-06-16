@@ -21,18 +21,19 @@ export default function Nav() {
         borderBottom: scrolled ? "1px solid rgba(212,175,55,0.2)" : "1px solid rgba(255,255,255,0.08)",
       }}
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-[70px]">
-        <Link href="/" className="flex items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 flex items-center justify-between h-[60px] sm:h-[70px]">
+        <Link href="/" className="flex items-center min-w-0">
           <span
-            className="text-xl font-black tracking-tight"
+            className="text-base sm:text-xl font-black tracking-tight truncate"
             style={{ color: "#ffffff" }}
           >
             The Website <span style={{ color: "#D4AF37" }}>Builders</span>
           </span>
         </Link>
 
-        <Link href="/survey" className="btn-primary">
-          Get Your Free Strategy Call
+        <Link href="/survey" className="btn-primary ml-3 px-4 sm:px-10 py-3 sm:py-[1.1rem] text-[0.65rem] sm:text-xs shrink-0">
+          <span className="sm:hidden">Free Strategy Call</span>
+          <span className="hidden sm:inline">Get Your Free Strategy Call</span>
         </Link>
       </div>
     </nav>

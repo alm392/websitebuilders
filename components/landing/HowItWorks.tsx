@@ -23,7 +23,7 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section className="py-24 px-6 lg:px-10 section-dark">
+    <section className="py-16 sm:py-24 px-5 sm:px-6 lg:px-10 section-dark">
       <div className="max-w-6xl mx-auto">
         <motion.div
           className="mb-16"
@@ -53,7 +53,7 @@ export default function HowItWorks() {
           {steps.map((step, i) => (
             <motion.div
               key={step.number}
-              className="relative p-8 lg:p-10"
+              className="relative p-6 sm:p-8 lg:p-10"
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -89,7 +89,7 @@ export default function HowItWorks() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <Link href="/survey" className="btn-primary">
+          <Link href="/survey" className="btn-primary w-full sm:w-auto text-center">
             Start Your Free Strategy Session
           </Link>
         </motion.div>

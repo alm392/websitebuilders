@@ -42,7 +42,7 @@ export default function FAQ() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section className="py-24 px-6 lg:px-10 section-light-alt">
+    <section className="py-16 sm:py-24 px-5 sm:px-6 lg:px-10 section-light-alt">
       <div className="max-w-3xl mx-auto">
         <motion.div
           className="mb-14"

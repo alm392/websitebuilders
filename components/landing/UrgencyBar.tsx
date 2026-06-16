@@ -49,7 +49,7 @@ export default function UrgencyBar() {
       }}
       className="relative z-50 py-2.5 px-4"
     >
-      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-3 text-center">
+      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 text-center">
         <p
           className="text-xs sm:text-sm font-bold tracking-wide"
           style={{ color: "#0a0404" }}
@@ -75,7 +75,7 @@ export default function UrgencyBar() {
         )}
         <Link
           href="/survey"
-          className="hidden sm:block text-xs font-black uppercase tracking-widest px-4 py-1.5 rounded-sm"
+          className="text-xs font-black uppercase tracking-widest px-4 py-1.5 rounded-sm"
           style={{ background: "#0a0404", color: "#D4AF37" }}
         >
           Claim Now
